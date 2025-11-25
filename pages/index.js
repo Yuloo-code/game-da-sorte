@@ -4,7 +4,7 @@ function Home() {
   };
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>Game da Sorte</h1>
+      <img src="https://iili.io/fqJtTKu.md.png" style={{ width: 300 }}></img>
       <h2>
         Plataforma em construção... <span style={style}>🏗️</span>
       </h2>
