@@ -1,0 +1,16 @@
+test("Method Not Allowed to api/v1/migrations should close the server", async () => {
+  const responseDelete = await fetch(
+    "http://localhost:3000/api/v1/migrations",
+    {
+      method: "DELETE",
+    },
+  );
+
+  expect(responseDelete.status).toBe(405);
+
+  const responsePut = await fetch("http://localhost:3000/api/v1/migrations", {
+    method: "PUT",
+  });
+
+  expect(responsePut.status).toBe(405);
+});
