@@ -1,3 +1,9 @@
+import orchestrator from "tests/orchestrator.js";
+
+beforeAll(async () => {
+  await orchestrator.waitForAllServices();
+});
+
 test("Method Not Allowed to api/v1/migrations should close the server", async () => {
   const responseDelete = await fetch(
     "http://localhost:3000/api/v1/migrations",
