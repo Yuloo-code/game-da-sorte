@@ -11,6 +11,7 @@ function handleReturn(error, stdout) {
     return;
   }
   process.stdout.write("✅ Postgres is accepting connections");
+  exec("sleep 1s");
 }
 
 process.stdout.write("\n🚦 Waiting Postgres  connections\n");
