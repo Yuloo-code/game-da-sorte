@@ -49,7 +49,7 @@ function DatabaseInfo() {
       ) : (
         <div>
           Versão:
-          {` ${data?.dependencies?.database?.version}`}
+          {` ${data?.dependencies?.database?.version.split(" ")[0]}`}
           <br></br>
           Conexão maxima:
           {` ${data?.dependencies?.database?.max_connections}`}
