@@ -25,12 +25,12 @@ function UpdateAt() {
 
   return (
     <>
-      {isLoading && data?.updated_at ? (
+      {isLoading ? (
         <p>carregando...</p>
       ) : (
         <div>
-          Ultima atualização:{" "}
-          {new Date(data?.updated_at).toLocaleString("pt-BR")}
+          Ultima atualização:
+          {` ${new Date(data?.updated_at).toLocaleString("pt-BR")}`}
         </div>
       )}
     </>
@@ -44,17 +44,18 @@ function DatabaseInfo() {
 
   return (
     <>
-      {isLoading && data ? (
+      {isLoading ? (
         <p>carregando...</p>
       ) : (
         <div>
-          Versão do banco de dados:{data?.dependencies?.database?.version}
+          Versão:
+          {` ${data?.dependencies?.database?.version.split(" ")[0]}`}
           <br></br>
           Conexão maxima:
-          {data?.dependencies?.database?.max_connections}
+          {` ${data?.dependencies?.database?.max_connections}`}
           <br></br>
-          Quantidade de conexões:
-          {data?.dependencies?.database?.opened_connections}
+          conexões abertas:
+          {` ${data?.dependencies?.database?.opened_connections}`}
         </div>
       )}
     </>
