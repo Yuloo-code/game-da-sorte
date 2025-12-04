@@ -6,10 +6,12 @@ async function query(queryObject) {
     client = await getNewClient();
     const result = await client.query(queryObject);
     return result;
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.log("\n Erro no catch do database");
+    console.error(error);
+    throw error;
   } finally {
-    await client.end();
+    await client?.end();
   }
 }
 
