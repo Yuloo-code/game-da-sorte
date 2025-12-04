@@ -7,24 +7,34 @@ beforeAll(async () => {
 describe("Method Not Allowed to api/v1/migrations", () => {
   describe("Anonymous user", () => {
     test("Making a DELETE request", async () => {
-      const responseDelete = await fetch(
-        "http://localhost:3000/api/v1/migrations",
-        {
-          method: "DELETE",
-        },
-      );
+      const response = await fetch("http://localhost:3000/api/v1/migrations", {
+        method: "DELETE",
+      });
 
-      expect(responseDelete.status).toBe(405);
+      expect(response.status).toBe(405);
+      const responseBody = await response.json();
+      expect(responseBody).toEqual({
+        name: "methodNotAllowedError",
+        message: "Método não permitido para este endpoint",
+        action:
+          "Verifique se o método HTTP enviado é válido para este endpoint",
+        statusCode: 405,
+      });
     });
     test("Making a PUT request", async () => {
-      const responsePut = await fetch(
-        "http://localhost:3000/api/v1/migrations",
-        {
-          method: "PUT",
-        },
-      );
+      const response = await fetch("http://localhost:3000/api/v1/migrations", {
+        method: "PUT",
+      });
 
-      expect(responsePut.status).toBe(405);
+      expect(response.status).toBe(405);
+      const responseBody = await response.json();
+      expect(responseBody).toEqual({
+        name: "methodNotAllowedError",
+        message: "Método não permitido para este endpoint",
+        action:
+          "Verifique se o método HTTP enviado é válido para este endpoint",
+        statusCode: 405,
+      });
     });
   });
 });
