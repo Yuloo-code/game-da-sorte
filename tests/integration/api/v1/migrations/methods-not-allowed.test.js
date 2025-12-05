@@ -18,7 +18,7 @@ describe("Method Not Allowed to api/v1/migrations", () => {
         message: "Método não permitido para este endpoint",
         action:
           "Verifique se o método HTTP enviado é válido para este endpoint",
-        statusCode: 405,
+        status_code: 405,
       });
     });
     test("Making a PUT request", async () => {
@@ -33,7 +33,7 @@ describe("Method Not Allowed to api/v1/migrations", () => {
         message: "Método não permitido para este endpoint",
         action:
           "Verifique se o método HTTP enviado é válido para este endpoint",
-        statusCode: 405,
+        status_code: 405,
       });
     });
   });
