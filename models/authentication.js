@@ -1,3 +1,4 @@
+/* eslint-disable no-inner-declarations*/
 import user from "models/user.js";
 import password from "models/password.js";
 import { NotFoundError, UnauthorizedError } from "infra/errors/index.js";
