@@ -1,6 +1,6 @@
-import database from "infra/database.js";
 import migrationRunner from "node-pg-migrate";
 import { resolve } from "node:path";
+import database from "infra/database.js";
 
 const defaultMigrations = {
   dryRun: true,
