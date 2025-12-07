@@ -1,5 +1,6 @@
 import crypto from "node:crypto";
 import database from "infra/database.js";
+import { NotFoundError } from "infra/errors/index.js";
 
 const EXPIRATIO_IN_MILISECONDS = 60 * 60 * 24 * 30 * 1000; // 30 days
 
