@@ -61,7 +61,7 @@
     "husky": "9.1.7",
     "jest": "30.2.0",
     "prettier": "3.7.4",
-    "set-cookie-parser": "2.7.1"
+    "set-cookie-parser": "2.7.2"
   },
   "config": {
     "commitizen": {
