@@ -28,6 +28,7 @@
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
     "lint:eslint:check": "next lint --dir .",
+    "lints": "npm run lint:prettier:check && npm run lint:eslint:check",
     "prepare": "husky",
     "commit": "cz"
   },
@@ -37,7 +38,7 @@
     "cookie": "1.0.2",
     "dotenv": "17.2.3",
     "dotenv-expand": "12.0.3",
-    "next": "13.5.11",
+    "next": "14.2.35",
     "next-connect": "1.0.0",
     "node-pg-migrate": "6.2.2",
     "pg": "8.16.3",
